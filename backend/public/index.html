@@ -20,15 +20,15 @@
           <h4>Node.js upload images - bezkoder.com</h4>
 
           <form class="mt-4"
-            action="/images/upload"
+            action="/images"
             method="POST"
             enctype="multipart/form-data"
           >
             <div class="form-group">
               <input
                 type="file"
-                name="file"
-                id="input-files"
+                name="myFile"
+                id="myFile"
                 class="form-control-file border"
               />
             </div>
@@ -62,7 +62,7 @@
             }
           }
         };
-        $("#input-files").on("change", function() {
+        $("#myFile").on("change", function() {
           imagesPreview(this, "div.preview-images");
         });
       });
