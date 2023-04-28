@@ -11,7 +11,6 @@ const ImageUploadForm = () => {
 
     const { register, handleSubmit } = useForm()
     const onSubmit = async (data) => {
-      console.log(data)
       const formData = new FormData()
       formData.append("myFile", data.myFile[0])
 

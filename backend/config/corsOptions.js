@@ -1,5 +1,6 @@
-const allowedOrigins = require('./allowedOrigins')
-
+require('dotenv').config()
+const allowedOrigins = process.env.ALLOWED_ORIGINS.split(",").map(origin=>origin)
+console.log(allowedOrigins)
 const corsOptions = {
     origin: (origin, callback) => {
         if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
