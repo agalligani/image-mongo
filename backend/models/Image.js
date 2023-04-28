@@ -22,10 +22,6 @@ const imageSchema = new mongoose.Schema(
         description: {
             type: String,
             required: false
-        },
-        date: {
-            type: Date,
-            required: false
         }
     },
     {

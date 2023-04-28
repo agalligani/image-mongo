@@ -32,8 +32,8 @@ app.use(
 app.use('/images', require('./routes/images'))
 app.use('/', express.static(path.join(__dirname, 'public')))
 // app.use('/', require('./routes/root'))
-app.use('/', (req,res)=>{
-    res.status(200).render('index')
+app.use('/', ( req, res ) => {
+    res.status(200).json({ message: 'ok' })
 })  
 
 app.all('*', (req, res) => {

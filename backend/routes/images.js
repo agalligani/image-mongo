@@ -3,6 +3,8 @@ const router = express.Router();
 const imagesController = require("../controllers/images");
 
 router.route('/')
-    .post(imagesController.postImages)
+    .get(imagesController.getAllImages)
+    .post(imagesController.postImages) //really just one image
+    .delete(imagesController.deleteImage)
 
 module.exports = router;
